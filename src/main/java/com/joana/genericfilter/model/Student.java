@@ -21,7 +21,7 @@ public class Student {
         this.name = name;
     }
 
-    public double getScore() {
+    public Double getScore() {
         return this.score;
     }
 

@@ -7,12 +7,7 @@ import java.util.*;
 /**
  * Created by Cardoso on 15-Mar-16.
  */
-public class StudentFilter implements Filter <Student> {
-
-    @Override
-    public boolean filter(Student obj) {
-        return false;
-    }
+public class StudentFilter {
 
     List<Student> student = Arrays.asList(
                 new Student("John", 17.5),
@@ -26,15 +21,15 @@ public class StudentFilter implements Filter <Student> {
                 new Student("Mary", 9.5));
 
 
-    LinkedList<Student> stud = ListUtils.filter(student, new Filter<Student>(){
+    LinkedList<Student> stud = ListUtils.filter(student, new Predicate<Student>(){
         @Override
-        public boolean filter(Student obj) {
-            return (obj.getScore() >= 12);
+        public boolean evaluate(Student t) {
+            return (t.getScore() >= 12);
         }
 
     });
 
-        private void sortStudentsByScore() {
+    private void sortStudentsByScore() {
             Collections.sort(stud, Collections.reverseOrder(new Comparator<Student>() {
                 @Override
                 public int compare(Student o1, Student o2) {
