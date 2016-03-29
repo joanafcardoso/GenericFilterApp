@@ -5,7 +5,7 @@ import com.joana.genericfilter.model.Student;
 import java.util.*;
 
 /**
- * Created by Cardoso on 15-Mar-16.
+ * Created by Joana Cardoso on 15-Mar-16.
  */
 public class StudentFilter {
 
@@ -21,10 +21,10 @@ public class StudentFilter {
                 new Student("Mary", 9.5));
 
 
-    LinkedList<Student> stud = ListUtils.filter(student, new Predicate<Student>(){
+    List<Student> stud = ListUtils.filter(student, new Predicate<Student>(){
         @Override
-        public boolean evaluate(Student t) {
-            return (t.getScore() >= 12);
+        public boolean evaluate (Student stud) {
+            return (stud.getScore() >= 12);
         }
 
     });

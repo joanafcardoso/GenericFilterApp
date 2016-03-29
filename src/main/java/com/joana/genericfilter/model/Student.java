@@ -1,5 +1,10 @@
 package com.joana.genericfilter.model;
 
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
 /**
  * Created by Cardoso on 14-Mar-16.
  */
@@ -28,4 +33,5 @@ public class Student {
     public void setScore(double score) {
         this.score = score;
     }
+
 }
